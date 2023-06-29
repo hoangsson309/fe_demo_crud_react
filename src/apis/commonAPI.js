@@ -3,3 +3,4 @@ export class CommonAPI {
     static UPDATE ='/update';
     static DELETE ='/delete';
 }
+//định nghĩa các đường dẫn sau: /student
