@@ -2,6 +2,7 @@ import request from "../request";
 import { CommonAPI } from "./commonAPI";
 export class StudentAPI {
     static API_PATH = "student";
+    //tên đường dẫn sau 8080
 
     static getAll = (pageNo) => {
         return request({
