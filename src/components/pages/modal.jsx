@@ -84,7 +84,7 @@ export const ModalView = (props) => {
 
         <Form.Item>
           <Button type="primary" htmlType="submit">
-            SUBMIT
+            Submit
           </Button>
         </Form.Item>
       </Form>
