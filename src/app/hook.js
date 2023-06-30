@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 export const useAppDispatch = () => useDispatch(); //useAppDispatch: Đây là một custom hook giúp bạn có thể 
 //sử dụng hàm dispatch trong Redux. Khi bạn cần gửi một action đến store để thay đổi state, 
-//bạn có thể sử dụng useAppDispatch để lấy được hàm dispatch và gọi nó để gửi action.
+//bạn có thể sử dụng useAppDispatch để lấy được hàm dispatch.
 //Tức là khi gọi 1 actions thì sẽ dùng cái này
 export const useAppSelector = useSelector;
 // Đây là một custom hook giúp bạn có thể lấy được state từ Redux store. Khi bạn cần truy cập vào state trong Redux store, 
