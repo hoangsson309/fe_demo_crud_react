@@ -20,7 +20,7 @@ export const StudentSlice = createSlice({
 }
 });
 
-export const GetStudent = (state) => state.student;
+export const GetStudent = (state) => state.student; //dùng để lấy ra dữ liệu (danh sách sinh viên) sau khi được set vào state ở SetStudent
 export const GetResponseObject = (state) => state.responseObject;
-export const { SetStudent, SetResponseObject } = StudentSlice.actions;
-export default StudentSlice.reducer;
+export const { SetStudent, SetResponseObject } = StudentSlice.actions; //dùng để xuất các ations, mà ở đây chính là (SetStudent, SetResponseObject)
+export default StudentSlice.reducer; //dùng để xuất các reducer của slice đó ở đây là(StudentSlice) trong này sẽ chứa các ations
