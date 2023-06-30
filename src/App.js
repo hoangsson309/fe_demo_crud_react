@@ -6,7 +6,7 @@ import { store } from './app/store';
 function App() {
   return (
     <div className="App">
-      <Provider store={store}>
+      <Provider store={store}> //Tất cả các component sử dụng redux đều phải nằm trong cái này
         <Home />
       </Provider>
     </div>
