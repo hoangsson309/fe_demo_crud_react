@@ -8,11 +8,14 @@ import { dispatch } from '../../app/store';
 const { Option } = Select;
 
 export const ModalView = (props) => {
-    const { modalOpen, setModalOpen, student } = props;
+    //props viết tắt của(properties ==> các thuộc tính), 
+    //khi mình gọi cái ModalView thì sẽ phải truyền vào các properties đã được khai báo
+    const { modalOpen, setModalOpen, student } = props; //Là cái này đây
     const [form] = Form.useForm();
     const dispath = useAppDispatch();
     const dispatch = useAppDispatch();
 
+    //setValues cho form
     form.setFieldsValue(student);
 
     const fetchData = async () => {
@@ -22,11 +25,12 @@ export const ModalView = (props) => {
     }
 
     const onFinish = () => {
-        const newStudent = form.getFieldsValue();
-        StudentAPI.add(newStudent)
+        const newStudent = form.getFieldsValue(); //lấy values của form 
+        StudentAPI.add(newStudent); //gọi Api thêm
         .then((response) => {
-            dispath(SetStudent(response.data.content));
+            dispath(SetStudent(response.data.content)); //sau khi thêm thì gọi actions để set lại dữ liệu (danh sách student);
             // dispath(SetResponseObject(response.data))
+            //Thêm xong rồi set lại như ban đầu thoiiii
             setModalOpen(false);
             form.setFieldsValue(null);
             console.log(response.data);
