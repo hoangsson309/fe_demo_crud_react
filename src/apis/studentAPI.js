@@ -16,7 +16,6 @@ export class StudentAPI {
             method: "POST",
             url: `/${this.API_PATH}${CommonAPI.ADD}`,
             data: data,
-            payload: data,
         });
     }
 }
